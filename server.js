@@ -6,19 +6,19 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles={
-articleOne: {
+'article-one': {
     title:'article-one',
     heading:'article-one',
     content:`<p>hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page</p>
             <p>hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page</p>
             <p>hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page</p> `
 },
- articleTwo : {  
+ 'article-two' : {  
     title:'article-two',
     heading:'article-two',
     content:`<p>hello everyone this is my second web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page</p>`},
             
-articleThree : {  
+'article-three' : {  
     title:'article-three',
     heading:'article-three',
     content:`<p>hello everyone this is my third web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page</p>
@@ -65,8 +65,9 @@ app.get('/', function (req, res) {
 });
 
 app.get('/articleName',function(req,res){
-    
-    var articleName= req.params.articleName;
+    //var articleName= article-one
+    //articles[articleName]={} content for object article-one
+           var articleName= req.params.articleName;
      res.send(createTemplate(articles[articleName]));
 });
 
