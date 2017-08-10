@@ -22,7 +22,7 @@ var htmlTemplate=`
     <head>
          <link href="/ui/style.css" rel="stylesheet" />
          <meta name="viewport" content="width=device-width, initial scale=1" />
-        ${title}
+        <title>${title}</title>
         <style>
             
         </style>
