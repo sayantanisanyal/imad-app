@@ -4,6 +4,6 @@ element.innerHTML='hello world';
 
 var image=document.getElementById('img');
 image.onclick = function(){
-    img.style.marginLeft=100px;
+    image.style.marginLeft= '100px';
     
 };
