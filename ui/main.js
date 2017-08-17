@@ -15,4 +15,4 @@ button.onclick =function(){
     var span= document.getElementById('count');
     span.innerHTML=counter.toString();
     
-}
+};
