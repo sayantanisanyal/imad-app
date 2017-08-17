@@ -1,14 +1,18 @@
-console.log('Loaded!');
-var element= document.getElementById('main-class');
-element.innerHTML='hello world';
+//counter code
 
-var image=document.getElementById('img');
-var marginLeft=0;
-var moveRight= function(){
-    marginLeft=marginLeft+1;
-    image.style.marginLeft=marginLeft+'px';
-}
-image.onclick = function(){
-    var interval= setInterval(moveRight,50);
+var button = document.getElementById('counter');
+counter.onclick =function(){
+    //request the counter endpoint
     
-};
+    
+    
+    // store it into a variable
+    
+    
+    
+    //render the variable in the correct span!!
+    counter=counter+1;
+    var span= document.getElementById('span');
+    span.innerHTML=counter.toString();
+    
+}
