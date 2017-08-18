@@ -23,11 +23,12 @@ button.onclick =function(){
 };
 
 // submit code
-var nameInput=document.getElementById('name');
-var name=nameInput.value;
+
 var submit=document.getElementById('submitBtn');
 submit.onclick =function(){
      var request= new XMLHttpRequest();
+var nameInput=document.getElementById('name');
+var name=nameInput.value;
     // store it into a variable
     request.onreadystatechange= function(){
         if(request.readyState===XMLHttpRequest.DONE)
