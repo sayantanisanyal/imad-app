@@ -11,7 +11,14 @@ var articles={
     heading:'article-one',
     content:`<p>hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page</p>
             <p>hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page</p>
-            <p>hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page</p> `
+            <p>hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page</p> `,
+    input: `<input type="text" id="content"  placeholder="content">`,
+    submit:`<input type="submit" id="submitBtn" value="Submit" `,
+    ui:`<ui id="ulist"> 
+    <li> name1</li>
+    <li> name2</li>
+    <li> name3</li>
+    </ui>`
 },
  'article-two' : {  
     title:'article-two',
