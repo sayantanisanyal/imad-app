@@ -69,6 +69,7 @@ var htmlTemplate=`
         ${submit}
         <br/>
         <ui id="ul">
+        <li>name1</li>
         </ul>
         </div>
         </div>
