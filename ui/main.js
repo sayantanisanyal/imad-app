@@ -13,7 +13,7 @@ var content=contentInput.value;
             {
                 var contents= request.responseText;
                 contents=JSON.parse(contents);
-                var list=[];
+                var list='';
   
                 for(var i=0;i<contents.length;i++)
                 {
