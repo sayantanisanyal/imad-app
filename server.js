@@ -70,7 +70,7 @@ var htmlTemplate=`
         <br/>
         <ui id="ul">
         <li>name1</li>
-        </ul>
+        </ui>
         </div>
         </div>
     </body>
