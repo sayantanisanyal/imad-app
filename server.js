@@ -38,6 +38,9 @@ function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
     var content=data.content;
+    var input=data.input;
+    var submit=data.submit;
+    var ui=data.ui;
 var htmlTemplate=`
 <html>
     <head>
@@ -58,6 +61,13 @@ var htmlTemplate=`
         </div>
         <div>
             ${content}
+        </div>
+        <div>
+        ${input}
+        
+        ${submit}
+        <br/>
+        ${ui}
         </div>
         </div>
     </body>
