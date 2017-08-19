@@ -72,14 +72,14 @@ var content=contentInput.value;
             if(request.status===200)
             {
                 var contents= request.responseText;
-                content=JSON.parse(contents);
+                contents=JSON.parse(contents);
                 var list=[];
   
                 for(var i=0;i<contents.length;i++)
                 {
                     list+='<li>'+contents[i]+'</li>';
                 }
-                var ui=document.getElementById('ulist');
+                var ui=document.getElementById('ul');
                 ui.innerHTML=list;
             }
         //else ignore
