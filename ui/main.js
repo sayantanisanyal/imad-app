@@ -1,17 +1,17 @@
 //content for articles
-var submit=document.getElementById('submitButton');
-submit.onclick =function(){
-     var request= new XMLHttpRequest();
+var sub=document.getElementById('submitButton');
+sub.onclick =function(){
+     var req= new XMLHttpRequest();
 var contentInput=document.getElementById('content');
 var content=contentInput.value;
     // store it into a variable
-    request.onreadystatechange= function(){
-        if(request.readyState===XMLHttpRequest.DONE)
+    req.onreadystatechange= function(){
+        if(req.readyState===XMLHttpRequest.DONE)
         {
             //take some action
-            if(request.status===200)
+            if(req.status===200)
             {
-                var contents= request.responseText;
+                var contents= req.responseText;
                 contents=JSON.parse(contents);
                 var list='';
   
@@ -26,8 +26,8 @@ var content=contentInput.value;
         }
     };
     //make a request
-    request.open('GET','http://sayantanisanyal21.imad.hasura-app.io/submit-content?content='+ content,true);
-    request.send(null);
+    req.open('GET','http://sayantanisanyal21.imad.hasura-app.io/submit-content?content='+ content,true);
+    req.send(null);
 
 };
 
