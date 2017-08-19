@@ -1,5 +1,5 @@
 //content for articles
-var submit=document.getElementById('submitButton');
+/*var submit=document.getElementById('submitButton');
 submit.onclick =function(){
      var request= new XMLHttpRequest();
 var contentInput=document.getElementById('content');
@@ -30,7 +30,7 @@ var content=contentInput.value;
     request.send(null);
 
 };
-
+*/
 
 //counter code
 var button = document.getElementById('counter');
