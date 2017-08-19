@@ -59,7 +59,7 @@ var name=nameInput.value;
 
 //content for articles
 
-var submit=document.getElementById('submitBtn');
+var submit=document.getElementById('submitButton');
 submit.onclick =function(){
      var request= new XMLHttpRequest();
 var contentInput=document.getElementById('content');
