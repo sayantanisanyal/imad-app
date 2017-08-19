@@ -58,7 +58,7 @@ button.onclick =function(){
 
 // submit code
 
-/*var submit=document.getElementById('submitBtn');
+var submit=document.getElementById('submitBtn');
 submit.onclick =function(){
      var request= new XMLHttpRequest();
 var nameInput=document.getElementById('name');
@@ -90,6 +90,6 @@ var name=nameInput.value;
 
 };
 
-*/
+
 
 
