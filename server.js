@@ -68,7 +68,8 @@ var htmlTemplate=`
         
         ${submit}
         <br/>
-        ${ui}
+        <ui id="ul">
+        </ul>
         </div>
         </div>
     </body>
