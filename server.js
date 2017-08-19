@@ -97,13 +97,6 @@ app.get('/submit-name/',function(req,res){
     res.send(JSON.stringify(names));
 });
 
-var contents=[];
-app.get('/submit-content/',function(req,res){
-    var content=req.query.content;
-    contents.push(content);
-    res.send(JSON.stringify(contents));
-    
-});
 
 
 
@@ -112,6 +105,14 @@ app.get('/:articleName',function(req,res){
     //articles[articleName]={} content for object article-one
            var articleName= req.params.articleName;
      res.send(createTemplate(articles[articleName]));
+});
+
+var contents=[];
+app.get('/submit-content/',function(req,res){
+    var content=req.query.content;
+    contents.push(content);
+    res.send(JSON.stringify(contents));
+    
 });
 
 //app.get('/article-two',function(req,res){
