@@ -1,3 +1,4 @@
+//content for articles
 var submit=document.getElementById('submitButton');
 submit.onclick =function(){
      var request= new XMLHttpRequest();
@@ -90,5 +91,5 @@ var name=nameInput.value;
 };
 
 
-//content for articles
+
 
