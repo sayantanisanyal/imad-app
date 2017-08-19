@@ -14,7 +14,7 @@ var articles={
             <p>hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page</p> `,
     input: `<input type="text" id="content"  placeholder="content">`,
     submit:`<input type="submit" id="submitBtn" value="Submit" `,
-    ui:`<ui id="ulist"> 
+    ui:`<ui id="ul"> 
     <li> name1</li>
     <li> name2</li>
     <li> name3</li>
