@@ -1,3 +1,36 @@
+var submit=document.getElementById('submitButton');
+submit.onclick =function(){
+     var request= new XMLHttpRequest();
+var contentInput=document.getElementById('content');
+var content=contentInput.value;
+    // store it into a variable
+    request.onreadystatechange= function(){
+        if(request.readyState===XMLHttpRequest.DONE)
+        {
+            //take some action
+            if(request.status===200)
+            {
+                var contents= request.responseText;
+                contents=JSON.parse(contents);
+                var list=[];
+  
+                for(var i=0;i<contents.length;i++)
+                {
+                    list+='<li>'+contents[i]+'</li>';
+                }
+                var ui=document.getElementById('ul');
+                ui.innerHTML=list;
+            }
+        //else ignore
+        }
+    };
+    //make a request
+    request.open('GET','http://sayantanisanyal21.imad.hasura-app.io/submit-content?content='+ content,true);
+    request.send(null);
+
+};
+
+
 //counter code
 var button = document.getElementById('counter');
 button.onclick =function(){
@@ -59,34 +92,3 @@ var name=nameInput.value;
 
 //content for articles
 
-var submit=document.getElementById('submitButton');
-submit.onclick =function(){
-     var request= new XMLHttpRequest();
-var contentInput=document.getElementById('content');
-var content=contentInput.value;
-    // store it into a variable
-    request.onreadystatechange= function(){
-        if(request.readyState===XMLHttpRequest.DONE)
-        {
-            //take some action
-            if(request.status===200)
-            {
-                var contents= request.responseText;
-                contents=JSON.parse(contents);
-                var list=[];
-  
-                for(var i=0;i<contents.length;i++)
-                {
-                    list+='<li>'+contents[i]+'</li>';
-                }
-                var ui=document.getElementById('ul');
-                ui.innerHTML=list;
-            }
-        //else ignore
-        }
-    };
-    //make a request
-    request.open('GET','http://sayantanisanyal21.imad.hasura-app.io/submit-content?content='+ content,true);
-    request.send(null);
-
-};
