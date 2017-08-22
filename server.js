@@ -20,14 +20,8 @@ var articles={
     title:'article-one',
     heading:'article-one',
     content:`c `,
-    input: `<input type="text" id="content"  placeholder="content">`,
-    submit:`<input type="submit" id="submitButton" value="Submit" `,
-    ui:`<ui id="ul"> 
-    <li> name1</li>
-    <li> name2</li>
-    <li> name3</li>
-    </ui>`
-},
+    //input: `<input type="text" id="content"  placeholder="content">`,
+   
  'article-two' : {  
     title:'article-two',
     heading:'article-two',
@@ -72,13 +66,8 @@ var htmlTemplate=`
             ${content}
         </div>
         <div>
-        ${input}
-        
-        ${submit}
         <br/>
-        <ui id="ul">
-        <li>name1</li>
-        </ui>
+    
         </div>
         </div>
     </body>
