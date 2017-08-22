@@ -19,9 +19,7 @@ var articles={
 'article-one': {
     title:'article-one',
     heading:'article-one',
-    content:`<p>hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page</p>
-            <p>hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page</p>
-            <p>hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page</p> `,
+    content:`c `,
     input: `<input type="text" id="content"  placeholder="content">`,
     submit:`<input type="submit" id="submitButton" value="Submit" `,
     ui:`<ui id="ul"> 
@@ -126,11 +124,22 @@ app.get('/submit-name/',function(req,res){
 
 
 
-app.get('/:articleName',function(req,res){
+app.get('/articles/:articleName',function(req,res){
     //var articleName= article-one
     //articles[articleName]={} content for object article-one
-           var articleName= req.params.articleName;
-     res.send(createTemplate(articles[articleName]));
+           
+           pool.query("SELECT * FROM article WHERE title=' "+ req.params.articleName + "'",function(err,result){
+               if(err)
+               {
+                   res.status(500).send(err.toString());
+               }else if(result.rows.length===0){
+                   res.status(404).send("article not found");
+               }else{
+                     var articleData=result.rows[0];               
+                     res.send(createTemplate(articleData));
+                    }
+           });
+    
 });
 
 var contents=[];
