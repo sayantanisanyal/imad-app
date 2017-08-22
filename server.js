@@ -21,6 +21,7 @@ var articles={
     heading:'article-one',
     content:`c `,
     //input: `<input type="text" id="content"  placeholder="content">`,
+},
    
  'article-two' : {  
     title:'article-two',
@@ -64,11 +65,7 @@ var htmlTemplate=`
         </div>
         <div>
             ${content}
-        </div>
-        <div>
-        <br/>
-    
-        </div>
+     
         </div>
     </body>
 </html>`;
