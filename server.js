@@ -104,6 +104,7 @@ app.get('/test-db',function(req,res){
           res.status(500).send(err.toString());
       }else
       {
+          console.log("its working");
           res.send(JSON.stringyfy(result));
       }
     });
