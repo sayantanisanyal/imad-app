@@ -31,7 +31,7 @@ var articles={
 'article-three' : {  
     title:'article-three',
     heading:'article-three',
-    content:`<p>hello everyone this is my third web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page</p>
+    content:`<p>hello everyone this is my third web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page hello everyone this is my first web page'</p>
              `
 }
 };
