@@ -7,11 +7,11 @@ var app = express();
 app.use(morgan('combined'));
 
 var config={
-    user:'sayantansanyal21',
-    database:'sayantansanyal21',
+    user:'sayantanisanyal21',
+    database:'sayantanisanyal21',
     host:'db.imad.hasura-app.io',
     port:'5432',
-    password:db-sayantanisanyal21-98589
+    password:process.env.DB_PASSWORD
     
 };
 
