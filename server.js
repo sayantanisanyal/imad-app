@@ -7,6 +7,7 @@ var bodyParser= require('body-parser');
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+
 var config={
     user:'sayantanisanyal21',
     database:'sayantanisanyal21',
@@ -83,11 +84,21 @@ var hash=function(input){
     return hashed.toString('hex');
 };
 
-app.post('/hash/:input',function(req,res){
+app.post('/create-user',function(req,res){
+    var salt=crypto.randomBytes(128).toString('hex');
+    
     var username=req.body.username;
     var password=req.body.password;
-    var hashedString= hash(req.params.input,'this-is-some-string');
-    res.send(hashedString);
+    var dbString=hash(password,salt);
+    pool.query('INSERT INTO "user"(username,password)VALUES($1,$2)',[username,dbString],function(err,result){
+      if(err)
+      {
+          res.status(500).send(err.toString());
+      }else
+      {
+          res.send('user successfully created' + username);
+      }
+    });
 });
 
 var pool= new Pool(config);
